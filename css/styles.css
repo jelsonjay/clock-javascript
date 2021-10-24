@@ -1,0 +1,25 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--clr-bg: linear-gradient(to right top, #65dfc9, #6cdbed);
+	--clr-border: hsl(6, 93%, 71%);
+	--clr-glass: linear-gradient(
+		to right top,
+		rgba(255, 255, 255, 0.7),
+		rgba(255, 255, 255, 0.3)
+	);
+}
+
+body {
+	background: var(--clr-bg);
+}
+.container {
+	width: 400px;
+	height: 400px;
+	background: var(--clr-glass);
+	border-radius: 50%;
+	border: 0.4rem solid var(--clr-border);
+}
