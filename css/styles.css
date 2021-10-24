@@ -6,6 +6,7 @@
 :root {
 	--clr-bg: linear-gradient(to right top, #65dfc9, #6cdbed);
 	--clr-border: hsl(6, 93%, 71%);
+	--rotation: 0;
 	--clr-glass: linear-gradient(
 		to right top,
 		rgba(255, 255, 255, 0.7),
@@ -22,4 +23,47 @@ body {
 	background: var(--clr-glass);
 	border-radius: 50%;
 	border: 0.4rem solid var(--clr-border);
+	position: relative;
+}
+.container .item {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transform: rotate(var(--rotation));
+	font-size: 2rem;
+	font-weight: 700;
+}
+.container .one {
+	--rotation: 30deg;
+}
+.container .two {
+	--rotation: 60deg;
+}
+.container .three {
+	--rotation: 90deg;
+}
+.container .four {
+	--rotation: 120deg;
+}
+.container .five {
+	--rotation: 150deg;
+}
+.container .six {
+	--rotation: 180deg;
+}
+.container .seven {
+	--rotation: 210deg;
+}
+.container .eigth {
+	--rotation: 240deg;
+}
+.container .nine {
+	--rotation: 270deg;
+}
+.container .ten {
+	--rotation: 300deg;
+}
+.container .eleven {
+	--rotation: 330deg;
 }
