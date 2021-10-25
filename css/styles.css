@@ -6,6 +6,7 @@
 :root {
 	--clr-bg: linear-gradient(to right top, #65dfc9, #6cdbed);
 	--clr-border: hsl(6, 93%, 71%);
+	--clr-black: hsl(0, 0%, 0%);
 	--rotation: 0;
 	--clr-glass: linear-gradient(
 		to right top,
@@ -66,4 +67,17 @@ body {
 }
 .container .eleven {
 	--rotation: 330deg;
+}
+.container .hand {
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	width: 0.8rem;
+	height: 50%;
+	border: 1px solid white;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	transform-origin: bottom;
+	background-color: var(--clr-black);
+	transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
 }
