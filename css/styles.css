@@ -17,6 +17,10 @@
 
 body {
 	background: var(--clr-bg);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
 }
 .container {
 	width: 400px;
@@ -72,12 +76,40 @@ body {
 	position: absolute;
 	bottom: 50%;
 	left: 50%;
-	width: 0.8rem;
-	height: 50%;
-	border: 1px solid white;
+	border: 1px solid hsl(0, 93%, 45%);
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	transform-origin: bottom;
 	background-color: var(--clr-black);
+	z-index: 10;
 	transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.container::after {
+	content: '';
+	position: absolute;
+	background-color: black;
+	z-index: 11;
+	width: 1.5rem;
+	height: 1.5rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+}
+
+.container .hand.hour {
+	height: 35%;
+	width: 0.9rem;
+	background-color: black;
+}
+.container .hand.min {
+	height: 40%;
+	width: 0.7rem;
+	background-color: purple;
+}
+.container .hand.sec {
+	height: 49%;
+	width: 0.3rem;
+	background-color: hsl(0, 93%, 45%);
 }
