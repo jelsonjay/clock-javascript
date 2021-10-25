@@ -13,15 +13,10 @@
 	--clr-border: hsl(6, 93%, 71%);
 	--clr-white: hsl(0, 0%, 100%);
 	--clr-black: hsl(0, 0%, 0%);
-	--clr-sec: hsl(0, 93%, 45%);
-	--clr-min: hsl(0, 93%, 45%);
+	--clr-sec: hsl(6, 93%, 71%);
+	--clr-min: hsl(0, 3%, 99%);
 	--clr-hour: hsl(0, 93%, 45%);
 	--rotation: 0;
-	--clr-glass: linear-gradient(
-		to right top,
-		rgba(255, 255, 255, 0.7),
-		rgba(255, 255, 255, 0.3)
-	);
 }
 
 body {
@@ -60,7 +55,7 @@ h1 {
 	transform: rotate(var(--rotation));
 	font-size: 3rem;
 	font-weight: 700;
-	color: hsl(132, 26%, 93%);
+	color: var(--clr-white);
 }
 .container .one {
 	--rotation: 30deg;
@@ -111,7 +106,7 @@ h1 {
 .container::after {
 	content: '';
 	position: absolute;
-	background-color: var(--clr-white);
+	background-color: hsl(6, 93%, 71%);
 	z-index: 11;
 	width: 1.5rem;
 	height: 1.5rem;
@@ -124,15 +119,15 @@ h1 {
 .container .hand.hour {
 	height: 35%;
 	width: 0.9rem;
-	background-color: black;
+	background-color: var(--clr-black);
 }
 .container .hand.min {
 	height: 40%;
 	width: 0.7rem;
-	background-color: purple;
+	background-color: var(--clr-black);
 }
 .container .hand.sec {
 	height: 49%;
 	width: 0.3rem;
-	background-color: hsl(0, 93%, 45%);
+	background-color: var(--clr-sec);
 }
