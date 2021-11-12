@@ -1,8 +1,12 @@
 // CLOCK
+
+//'use strict'
+(function myFunc(win, doc){
+'use strict'
 setInterval(theClock, 1000)
-const secHand = document.querySelector('[data-sec-hand')
-const minHand = document.querySelector('[data-min-hand')
-const hoursHand = document.querySelector('[data-hour-hand')
+const secHand = doc.querySelector('[data-sec-hand')
+const minHand = doc.querySelector('[data-min-hand')
+const hoursHand = doc.querySelector('[data-hour-hand')
 
 function theClock(){
 const todayDate = new Date()
@@ -19,3 +23,5 @@ event.style.setProperty('--rotation', rotationAll * 360)
 }
 
 theClock()
+
+})(window, document)
