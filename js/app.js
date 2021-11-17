@@ -1,6 +1,6 @@
 // CLOCK
 
-//'use strict'
+//IIFE
 (function myFunc(win, doc){
 'use strict'
 setInterval(theClock, 1000)
